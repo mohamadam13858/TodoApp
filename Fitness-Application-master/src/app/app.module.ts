@@ -22,9 +22,9 @@ import { PersianDatePipe } from './persian-date.pipe';
 import { TranslationPipe } from './translation.pipe';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 import { PersianPaginatorIntl } from './pagination.translate';
-
+  
  
-@NgModule({
+@NgModule({ 
   declarations: [
     AppComponent,
     LoginComponent,
