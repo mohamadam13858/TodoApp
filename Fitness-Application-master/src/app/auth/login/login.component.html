@@ -1,0 +1,20 @@
+<section class="signupForm marginTop">
+    <form class="column" #F="ngForm" (ngSubmit)="onSubmit(F)">
+
+        <mat-form-field class="marginTop">
+            <input matInput type="text" email placeholder="ایمیل" ngModel name="Email" required #emailInput="ngModel">
+            <mat-error *ngIf="emailInput.hasError('required')">ایمیل نباید خالی باشد </mat-error>
+            <mat-error *ngIf="!emailInput.hasError('required')">ایمیل نامعتبر است</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="marginTop" hintLabel="رمز عبور حداقل باید شش کاراکتر داشته باشد">
+            <input matInput type="text" placeholder="رمز عبور " ngModel name="Password" required minlength="6"
+                #pwInput="ngModel">
+            <mat-hint align="end">{{pwInput.value.length}} / 6</mat-hint>
+            <mat-error>رمز عبور حداقل باید شش کاراکتر داشته باشد </mat-error>
+        </mat-form-field>
+
+
+        <button class="marginTop" mat-raised-button type="submit" color="primary" [disabled]="F.invalid">ثبت</button>
+    </form>
+</section>
