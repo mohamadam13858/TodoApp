@@ -5,23 +5,22 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { TodoComponent } from './components/todo/todo.component';
-import { CategoryComponent } from './components/category/category.component';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
-import { AngularFireModule } from '@angular/fire/compat'
-import { environment } from '../environment';
+import { FormsModule } from '@angular/forms'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    TodoComponent,
-    CategoryComponent
+    TodoComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
